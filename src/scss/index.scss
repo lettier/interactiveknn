@@ -1,0 +1,180 @@
+/*
+  David Lettier (C) 2016
+  http://www.lettier.com/
+*/
+
+$sidebarColor: #34495e;
+$blue: #3498db;
+$canvasColor: #2c3e50;
+
+$laptopLWidth: 1440px;
+$laptopWidth: 1024px;
+$tabletWidth: 768px;
+
+@mixin laptopL {
+  @media (max-width: #{$laptopLWidth}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$laptopWidth}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tabletWidth}) {
+    @content;
+  }
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  background: $canvasColor;
+  overflow: hidden;
+  font-family: Arial;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#title {
+  color: whitesmoke;
+  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 100px;
+  @include laptopL {
+    font-size: 80px;
+  }
+  @include laptop {
+    font-size: 65px;
+  }
+  @include tablet {
+    font-size: 50px;
+  }
+}
+
+#instructions {
+  color: whitesmoke;
+  font-family: Arial;
+  font-size: 50px;
+}
+
+#startButton {
+  cursor: pointer;
+  margin-top: 50px;
+  color: whitesmoke;
+  border: none;
+  background-color: $blue;
+  font-size: 30px;
+  width: 200px;
+  height: 50px;
+}
+
+#overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.5);
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+#logoContainer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#logo {
+  width: 250px;
+  height: 250px;
+  @include laptopL {
+    width: 200px;
+    height: 200px;
+  }
+  @include laptop {
+    width: 150px;
+    height: 150px;
+  }
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.instructionBlock {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  background-color: $canvasColor;
+  vertical-align: top;
+  padding: 20px;
+  text-align: left;
+  @include laptopL {
+    width: 250px;
+    height: 250px;
+    font-size: 33px;
+  }
+  @include laptop {
+    width: 230px;
+    height: 230px;
+    font-size: 30px;
+  }
+  @include tablet {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+}
+
+.coloredCharactersContainer {
+  white-space: nowrap;
+  display: inline-flex;
+}
+
+.purple {
+  color: #7459FF;
+}
+
+.orange {
+  color: #e74c3c;
+}
+
+.yellow {
+  color: #f1c40f;
+}
+
+.green {
+  color: #2ecc71;
+}
+
+.blue {
+  color: $blue;
+}
+
+.gray {
+  color: #95a5a6;
+}
+
+.baseDot {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+.baseSidebar {
+  display: none;
+  width: 100px;
+  color: $sidebarColor;
+}

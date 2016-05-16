@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- David Lettier (C) 2016 http://www.lettier.com/ -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Interactive K-Nearest Neighbors</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="overlay">
+        <p id="title">Interactive K-Nearest Neighbors</p>
+        <div id="instructions">
+          <div class="instructionBlock">
+            Take any number of the
+            <div class="coloredCharactersContainer">
+              <span class="purple">c</span>
+              <span class="orange">o</span>
+              <span class="yellow">l</span>
+              <span class="blue">o</span>
+              <span class="green">r</span>
+              <span class="purple">e</span>
+              <span class="orange">d</span>
+            </div>
+            dots from the left and drag them anywhere on the canvas.
+          </div>
+          <div class="instructionBlock">
+            Take any number of the <span class="gray">gray</span> dots and place them among the
+            <div class="coloredCharactersContainer">
+              <span class="purple">c</span>
+              <span class="orange">o</span>
+              <span class="yellow">l</span>
+              <span class="blue">o</span>
+              <span class="green">r</span>
+              <span class="purple">e</span>
+              <span class="orange">d</span>
+            </div>
+            dots.<br><br>
+          </div>
+          <div class="instructionBlock">
+            When you are ready, select <span class="blue">k</span>
+            and press <span class="yellow">runKNN</span> located in the upper right corner.
+          </div>
+        </div>
+        <button id="startButton" onClick="init();">Start</button>
+      </div>
+      <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+    <div id="logoContainer">
+      <a href="#" onclick="window.open('https://lettier.github.io/posts/2016-06-10-k-nearest-neighbors-from-scratch.html')" title="Lettier.com Blog">
+        <img id="logo" src="images/logo.png" width="250" height="250" alt="Lettier.com Blog">
+      </a>
+    </div>
+    <div id="baseDot"   class="baseDot"></div>
+    <div id="purpleDot" class="baseDot purple"></div>
+    <div id="orangeDot" class="baseDot orange"></div>
+    <div id="yellowDot" class="baseDot yellow"></div>
+    <div id="greenDot"  class="baseDot green"></div>
+    <div id="blueDot"   class="baseDot blue"></div>
+    <div id="grayDot"   class="baseDot gray"></div>
+    <div id="baseSidebar" class="baseSidebar"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
